@@ -1,2 +1,2 @@
 # chatdice
-rework of ChatDice with SolidJS and Laravel
+rework of DiceChat with SolidStart and Laravel
