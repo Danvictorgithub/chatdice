@@ -1,2 +1,3 @@
 # chatdice
-rework of DiceChat with SolidStart and Laravel
+
+rework of DiceChat with SolidStart and Laravel (And also practicing Neovim)
