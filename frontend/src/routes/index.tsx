@@ -9,7 +9,7 @@ export default function Home() {
         class="bg-gradient-to-br from-zinc-900 to-zinc-800 
         min-h-[calc(100svh-64px)] flex items-center justify-center"
       >
-        <div class="bg-white rounded-md p-4">
+        <div class="bg-white rounded-md p-4 m-4">
           <div class="flex item-center justify-center my-8">
             <div class="p-4 border-[4px] border-gray-800 rounded-md h-12 w-12 flex items-center justify-center">
               <div class="border-[4px] rounded-full border-red-500"></div>
