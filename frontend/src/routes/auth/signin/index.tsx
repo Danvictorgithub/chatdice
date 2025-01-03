@@ -1,5 +1,4 @@
 import { A } from "@solidjs/router";
-import Header2 from "~/components/Header2";
 
 export default function () {
   return (
