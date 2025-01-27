@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Validator;
-
+use Illuminate\Auth\Events\Registered;
 
 class AuthController extends Controller
 {
@@ -18,7 +18,6 @@ class AuthController extends Controller
     public function register()
     {
         $validator = Validator::make(request()->all(), [
-            'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed|min:8',
         ]);
@@ -28,10 +27,10 @@ class AuthController extends Controller
         }
 
         $user = new User;
-        $user->name = request()->name;
         $user->email = request()->email;
         $user->password = bcrypt(request()->password);
         $user->save();
+        event(new Registered($user));
 
         return response()->json($user, 201);
     }
